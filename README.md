@@ -113,7 +113,7 @@ Les étapes ci-dessous permettront à Weewx d'enregistrer dans sa base de donné
 ## Configuration
  1. Ajouter à la fin du fichier **extensions.py** (situé dans le dossier "utilisateur" de weewx (le plus souvent /usr/share/weewx/user ou /home/weewx/bin/user)les lignes suivantes :
  
- Si vous utilisez le schema standard utilisé par les version antérieures à la V4.0.0 de Weewx
+ Si vous utilisez le schéma standard utilisé par les versions antérieures à la V4.0.0 de Weewx
  ```python
    import schemas.wview
    import weewx.units
@@ -122,7 +122,7 @@ Les étapes ci-dessous permettront à Weewx d'enregistrer dans sa base de donné
    weewx.units.obs_group_dict['highOutTemp'] = 'group_temperature'
  ```
 
- Si vous utilisez le nouveau schema étendu introduit à partir de Weewwx V 4.0.0
+ Si vous utilisez le nouveau schéma étendu introduit à partir de Weewwx V 4.0.0
  ```python
    import schemas.wview
    import weewx.units
@@ -172,7 +172,7 @@ Les étapes ci-dessous permettront à Weewx d'enregistrer dans sa base de donné
        Cette commande va créer une nouvelle base de donnée (**weewx.sdb_new** si vous utilisez SQLite, **weewx_new** si vous utilisez MySQL) en utilisant le nouveau schéma et va transférer les données dans cette nouvelle base de donnée.
        
    5. Configurer Weewx pour la nouvelle base de donnée.
-   **Soyez sûrs de ce que vous faites à ce point, car vous pouvez potentiellement corompre ou perdre vos données d'archives. Il vaut mieux faire une sauvegarde de la base de donnée avant..**
+   **Soyez sûrs de ce que vous faites à ce point, car vous pouvez potentiellement corrompre ou perdre vos données d'archives. Il vaut mieux faire une sauvegarde de la base de donnée avant..**
    
    Vous pouvez le faire soit en renommant la nouvelle base de donnée, ou en modifiant dans weewx.conf le nom de la base de données à utiliser. Pour renommer la nouvelle base de données:
 
