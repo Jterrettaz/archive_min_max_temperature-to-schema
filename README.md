@@ -13,6 +13,8 @@ The configuration steps described below will allow Weewx to store the archive pe
 
 ## Configuration
  1. Add at the end of the file **extensions.py** located in the user directory (most often /usr/share/weewx/user or /home/weewx/bin/user) the following lines :
+ 
+ If you are using the standard schema used before Weewx V4.0.0 :
  ```python
    import schemas.wview
    import weewx.units
@@ -110,6 +112,8 @@ Les étapes ci-dessous permettront à Weewx d'enregistrer dans sa base de donné
 
 ## Configuration
  1. Ajouter à la fin du fichier **extensions.py** (situé dans le dossier "utilisateur" de weewx (le plus souvent /usr/share/weewx/user ou /home/weewx/bin/user)les lignes suivantes :
+ 
+ Si vous utilisez le schema standard utilisé par les version antérieures à la V4.0.0 de Weewx
  ```python
    import schemas.wview
    import weewx.units
