@@ -46,7 +46,7 @@ The configuration steps described below will allow Weewx to store the archive pe
          # The schema defines the structure of the database.
          # It is *only* used when the database is created.
          #schema = schemas.wview.schema
-         schema= user.extensions. schema_with_low_high_temp 
+         schema= user.extensions.schema_with_low_high_temp 
  ```
  
  ### with mysql database :
@@ -63,7 +63,7 @@ The configuration steps described below will allow Weewx to store the archive pe
          # The schema defines the structure of the database.
          # It is *only* used when the database is created.
          #schema = schemas.wview.schema
-         schema= user.extensions. schema_with_low_high_temp 
+         schema= user.extensions.schema_with_low_high_temp 
  ```
  
  3. Shutdown Weewx and update your database to bring in the new field.
@@ -145,7 +145,7 @@ Les étapes ci-dessous permettront à Weewx d'enregistrer dans sa base de donné
          # The schema defines the structure of the database.
          # It is *only* used when the database is created.
          #schema = schemas.wview.schema
-         schema= user.extensions. schema_with_low_high_temp 
+         schema= user.extensions.schema_with_low_high_temp 
  ```
  
  ### with mysql :
@@ -162,7 +162,7 @@ Les étapes ci-dessous permettront à Weewx d'enregistrer dans sa base de donné
          # The schema defines the structure of the database.
          # It is *only* used when the database is created.
          #schema = schemas.wview.schema
-         schema= user.extensions. schema_with_low_high_temp 
+         schema= user.extensions.schema_with_low_high_temp 
  ```
  
  3. Stopper Weewx et mettre à jour la base de donnée avec les nouveaux champs. Dans une fenêtre terminal:
