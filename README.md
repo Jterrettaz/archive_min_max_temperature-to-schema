@@ -66,29 +66,11 @@ The configuration steps described below will allow Weewx to store the archive pe
          schema= user.extensions.schema_with_low_high_temp 
  ```
  
- 3. Shutdown Weewx and update your database to bring in the new field.
+ 3. Shutdown Weewx and update your database to bring in the new fields. (Weewx v4.5.0 or newer)
        ```python
-       wee_database weewx.conf --reconfigure
+       wee_database --add-column=lowOutTemp
+       wee_database --add-column=highOutTemp
        ```
-      This will create a new database (nominally, weewx.sdb_new if you are using SQLite, weewx_new if you are using MySQL) using the new schema and populate it with data from the old database.
-   5. Shuffle the databases. Now arrange things so WeeWX can find the new database.
-   **Make sure you know what you're doing at this point, you can potentially corrupt/lose your archive data.**
-   You can either shuffle the databases around so the new database has the same name as the old database, or edit weewx.conf to use the new database name. To do the former:
-
- ### For SQLite:
-  ```
-    cd SQLITE_ROOT
-    mv weewx.sdb_new weewx.sdb
-  ```
-
-  ### For Mysql: 
-  ```
-    mysql -u <username> --password=<mypassword>
-    mysql> DROP DATABASE weewx;                             # Delete the old database
-    mysql> CREATE DATABASE weewx;                           # Create a new one with the same name
-    mysql> RENAME TABLE weewx_new.archive TO weewx.archive; # Rename to the nominal name
-  ```
-  Lots more detail on this process can be found here:http://www.weewx.com/docs/customizing.htm#archive_database
   
   4. Restart Weewx
   
@@ -148,7 +130,7 @@ Les étapes ci-dessous permettront à Weewx d'enregistrer dans sa base de donné
          schema= user.extensions.schema_with_low_high_temp 
  ```
  
- ### with mysql :
+ ### avec mysql :
   ```python
   [DataBindings]
      [[wx_binding]]
@@ -165,32 +147,12 @@ Les étapes ci-dessous permettront à Weewx d'enregistrer dans sa base de donné
          schema= user.extensions.schema_with_low_high_temp 
  ```
  
- 3. Stopper Weewx et mettre à jour la base de donnée avec les nouveaux champs. Dans une fenêtre terminal:
+ 3. Stopper Weewx et mettre à jour la base de donnée avec les nouveaux champs (Weewx v4.5.0 or plus récent). 
+ Dans une fenêtre terminal:
        ```python
-       wee_database weewx.conf --reconfigure
+       wee_database --add-column=lowOutTemp
+       wee_database --add-column=highOutTemp
        ```
-       Cette commande va créer une nouvelle base de donnée (**weewx.sdb_new** si vous utilisez SQLite, **weewx_new** si vous utilisez MySQL) en utilisant le nouveau schéma et va transférer les données dans cette nouvelle base de donnée.
-       
-   5. Configurer Weewx pour la nouvelle base de donnée.
-   **Soyez sûrs de ce que vous faites à ce point, car vous pouvez potentiellement corrompre ou perdre vos données d'archives. Il vaut mieux faire une sauvegarde de la base de donnée avant..**
-   
-   Vous pouvez le faire soit en renommant la nouvelle base de donnée, ou en modifiant dans weewx.conf le nom de la base de données à utiliser. Pour renommer la nouvelle base de données:
-
-Pour SQLite:
-  ```
-    cd SQLITE_ROOT
-    mv weewx.sdb_new weewx.sdb
-  ```
-
-Pour Mysql: 
-  ```
-    mysql -u <username> --password=<mypassword>
-    mysql> DROP DATABASE weewx;                             # Delete the old database
-    mysql> CREATE DATABASE weewx;                           # Create a new one with the same name
-    mysql> RENAME TABLE weewx_new.archive TO weewx.archive; # Rename to the nominal name
-  ```
-    
-  Pour plus de détails sur l'ajout d'un nouveau paramètre, voir : http://www.weewx.com/docs/customizing.htm#archive_database
   
   4. Redémarrer Weewx
   
