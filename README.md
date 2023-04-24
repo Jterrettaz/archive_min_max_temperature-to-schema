@@ -1,5 +1,5 @@
 Voir texte en français plus bas.
-# archive_min_max_temperature-to-schema
+# archive_min_max_temperature
 Add the min and max temperature of each Davis Vantage Pro datalogger archive record into weewx database schema
 
 In each Davis Vantage Pro datalogger archive record, there is 3 temperature values :
