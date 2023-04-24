@@ -21,8 +21,8 @@ The configuration steps described below will allow Weewx to store the archive pe
  
  2. Shutdown Weewx and update your database to bring in the new fields. (Weewx v4.5.0 or newer)
        ```python
-       wee_database --add-column=lowOutTemp
-       wee_database --add-column=highOutTemp
+       sudo wee_database --add-column=lowOutTemp
+       sudo wee_database --add-column=highOutTemp
        ```
   
   3. Restart Weewx
@@ -56,8 +56,8 @@ Les étapes ci-dessous permettront à Weewx d'enregistrer dans sa base de donné
  2. Stopper Weewx et mettre à jour la base de donnée avec les nouveaux champs (Weewx v4.5.0 or plus récent). 
  Dans une fenêtre terminal:
        ```python
-       wee_database --add-column=lowOutTemp
-       wee_database --add-column=highOutTemp
+       sudo wee_database --add-column=lowOutTemp
+       sudo wee_database --add-column=highOutTemp
        ```
   
   4. Redémarrer Weewx
