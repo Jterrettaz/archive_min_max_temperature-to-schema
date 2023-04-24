@@ -32,7 +32,7 @@ The configuration steps described below will allow Weewx to store the archive pe
   - Absolute lowest temperature of last hour :  **$hour.lowOutTemp.min**
   - Absolute highest temperature of the day : **$day.highOutTemp.max**
   
-  # archive_min_max_temperature-to-schema
+  # archive_min_max_temperature
 Ajout dans la base de données de Weewx des températures mini et maxi de chaque période d'archivage (station Davis Vantage)
 
 A chaque archivage dans le datalogger, la console de la VP2 enregistre 3 données de température :
