@@ -24,13 +24,13 @@ The configuration steps described below will allow Weewx to store the archive pe
        sudo wee_database --add-column=lowOutTemp
        sudo wee_database --add-column=highOutTemp
        ```
-   In case of error (unknown command) and if weewx has been installed using setup.py , use 
+   In case of error (unknown command) and if weewx has been installed using setup.py : 
        ```python
        sudo /home/weewx/bin/wee_database --add-column=lowOutTemp
        sudo /home/weewx/bin/wee_database --add-column=highOutTemp
        ```
     
-    If weewx has been installed from a DEB or RPM package, use
+    or if weewx has been installed from a DEB or RPM package :
        ```python
        sudo /usr/bin/wee_database --add-column=lowOutTemp
        sudo /usr/bin/wee_database --add-column=highOutTemp
