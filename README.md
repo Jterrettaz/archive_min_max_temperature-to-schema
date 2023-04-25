@@ -20,23 +20,21 @@ The configuration steps described below will allow Weewx to store the archive pe
  ```
  
  2. Shutdown Weewx and update your database to bring in the new fields. (Weewx v4.5.0 or newer)
-       ```python
-       sudo wee_database --add-column=lowOutTemp
-       sudo wee_database --add-column=highOutTemp
-       ```
-   In case of error (unknown command) and if weewx has been installed using setup.py : 
-   
-       ```python
-       sudo /home/weewx/bin/wee_database --add-column=lowOutTemp
-       sudo /home/weewx/bin/wee_database --add-column=highOutTemp
-       ```
+ ```
+ sudo wee_database --add-column=lowOutTemp
+ sudo wee_database --add-column=highOutTemp
+ ```
+ In case of error (unknown command) and if weewx has been installed using setup.py : 
+ ```
+ sudo /home/weewx/bin/wee_database --add-column=lowOutTemp
+ sudo /home/weewx/bin/wee_database --add-column=highOutTemp
+ ```
     
-    or if weewx has been installed from a DEB or RPM package :
-    
-       ```python
-       sudo /usr/bin/wee_database --add-column=lowOutTemp
-       sudo /usr/bin/wee_database --add-column=highOutTemp
-       ```
+ or if weewx has been installed from a DEB or RPM package :
+ ```
+ sudo /usr/bin/wee_database --add-column=lowOutTemp
+ sudo /usr/bin/wee_database --add-column=highOutTemp
+ ```
  3. Restart Weewx
   
   Two new fields, **lowOutTemp** and **highOutTemp** are now populated each time an archive record is added to the weewx archive database.
