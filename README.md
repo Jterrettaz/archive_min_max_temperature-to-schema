@@ -14,9 +14,9 @@ The configuration steps described below will allow Weewx to store the archive pe
 ## Configuration
  1. Add at the end of the file **extensions.py** located in the user directory (most often /usr/share/weewx/user or /home/weewx/bin/user) the following lines :
  ```python
-   import weewx.units
-   weewx.units.obs_group_dict['lowOutTemp'] = 'group_temperature'
-   weewx.units.obs_group_dict['highOutTemp'] = 'group_temperature'
+ import weewx.units
+ weewx.units.obs_group_dict['lowOutTemp'] = 'group_temperature'
+ weewx.units.obs_group_dict['highOutTemp'] = 'group_temperature'
  ```
  
  2. Shutdown Weewx and update your database to bring in the new fields. (Weewx v4.5.0 or newer)
