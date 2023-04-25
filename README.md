@@ -19,7 +19,7 @@ The configuration steps described below will allow Weewx to store the archive pe
  weewx.units.obs_group_dict['highOutTemp'] = 'group_temperature'
  ```
  
- 2. Shutdown Weewx and update your database to bring in the new fields. (Weewx v4.5.0 or newer)
+ 2. Shutdown Weewx and update your database to bring in the new fields. (**Weewx v4.5.0 or newer**)
  ```
  sudo wee_database --add-column=lowOutTemp
  sudo wee_database --add-column=highOutTemp
@@ -63,7 +63,7 @@ Les étapes ci-dessous permettront à Weewx d'enregistrer dans sa base de donné
    weewx.units.obs_group_dict['highOutTemp'] = 'group_temperature'
  ```
  
- 2. Stopper Weewx et mettre à jour la base de donnée avec les nouveaux champs (Weewx v4.5.0 or plus récent). 
+ 2. Stopper Weewx et mettre à jour la base de donnée avec les nouveaux champs (**Weewx v4.5.0 ou plus récent**). 
  Dans une fenêtre terminal:
        ```python
        sudo wee_database --add-column=lowOutTemp
