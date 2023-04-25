@@ -24,8 +24,18 @@ The configuration steps described below will allow Weewx to store the archive pe
        sudo wee_database --add-column=lowOutTemp
        sudo wee_database --add-column=highOutTemp
        ```
-  
-  3. Restart Weewx
+   In case of error (unknown command) and if weewx has been installed using setup.py , use 
+       ```python
+       sudo /home/weewx/bin/wee_database --add-column=lowOutTemp
+       sudo /home/weewx/bin/wee_database --add-column=highOutTemp
+       ```
+    
+    If weewx has been installed from a DEB or RPM package, use
+       ```python
+       sudo /usr/bin/wee_database --add-column=lowOutTemp
+       sudo /usr/bin/wee_database --add-column=highOutTemp
+       ```
+ 3. Restart Weewx
   
   Two new fields, **lowOutTemp** and **highOutTemp** are now populated each time an archive record is added to the weewx archive database.
   These fields are accessible using Weewx tags, for example :
@@ -59,7 +69,17 @@ Les étapes ci-dessous permettront à Weewx d'enregistrer dans sa base de donné
        sudo wee_database --add-column=lowOutTemp
        sudo wee_database --add-column=highOutTemp
        ```
-  
+    En cas d'erreur (commande introuvable) et si weewx a été installé avec setup.py : 
+       ```python
+       sudo /home/weewx/bin/wee_database --add-column=lowOutTemp
+       sudo /home/weewx/bin/wee_database --add-column=highOutTemp
+       ```
+    
+    ou si weewx a été installé depuis un package DEB ou RPM:
+       ```python
+       sudo /usr/bin/wee_database --add-column=lowOutTemp
+       sudo /usr/bin/wee_database --add-column=highOutTemp
+       ```
   4. Redémarrer Weewx
   
   Les 2 nouveaux champs, **lowOutTemp** and **highOutTemp** sont maintenant ajoutés chaque fois qu'un enregistrement d'archive est ajouté dans la base de données d'archive de Weewx.
